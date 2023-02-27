@@ -27,7 +27,7 @@ function routeRender(routes) {
     return acc;
   }, {});
 
-  history.replaceState(query, ""); // quertString의 값을 history에 넣어준다.
+  history.replaceState(query, ""); // queryString의 값을 history에 넣어준다.
 
   const currentRoute = routes.find(
     (route) => new RegExp(`${route.path}/?$`).test(hash) // 받은 route 정보에서 hash의 값을 비교해서 currentRoute에 담음
@@ -58,12 +58,16 @@ export class Store {
         get: () => state[key],
         set: (val) => {
           state[key] = val;
-          this.observers[key]();
+          if (Array.isArray(this.observers[key])) {
+            this.observers[key].forEach((observer) => observer(val));
+          }
         },
       });
     }
   }
   subscribe(key, cb) {
-    this.observers[key] = cb;
+    Array.isArray(this.observers[key])
+      ? this.observers[key].push(cb)
+      : (this.observers[key] = [cb]);
   }
 }
