@@ -5,14 +5,13 @@ export default class Headline extends Component {
     this.el.classList.add("headline");
     this.el.innerHTML = /*html */ `
         <h1>
-            <span>OMDb API</span><br />
-            THE OPEN <br />
-            MOVIE DATABASE
+            <span>Search</span><br />
+            for it! <br /> 
+            What you want.
         </h1>
         <p>
-            The OMDb API is a RESTful web service to obtain movie information,
-            all content and images on the site are contributed and maintained by our users. <br />
-            If you find this service useful, please consider making a one-time donation or become a patron.
+        As a movie search site using OMDbAPI
+        You can search for information about the movie you want through search.
         </p>
         `;
   }

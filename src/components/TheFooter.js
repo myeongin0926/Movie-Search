@@ -1,4 +1,5 @@
 import { Component } from "../core/Core";
+import aboutStore from "../store/about";
 
 export default class TheFooter extends Component {
   constructor() {
@@ -7,14 +8,15 @@ export default class TheFooter extends Component {
     });
   }
   render() {
+    const { github, repository } = aboutStore.state;
     this.el.innerHTML = /*html*/ `
     <div>
-        <a href="https://github.com/myeongin0926/Movie-Search">
+        <a href="${repository}">
             GitHub Repository
             </a>
     </div>
     <div>
-        <a href="https://github.com/myeongin0926">
+        <a href="${github}">
             ${new Date().getFullYear()}
             Myeongin
         </a>

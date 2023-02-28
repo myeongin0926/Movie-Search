@@ -1,14 +1,14 @@
 html {
-  --color-black: #0e121b;
+  --color-black: #000000;
   --color-white: #fff;
   --color-white-50: rgba(255, 255, 255, 0.5);
   --color-white-30: rgba(255, 255, 255, 0.3);
   --color-white-20: rgba(255, 255, 255, 0.2);
   --color-white-10: rgba(255, 255, 255, 0.1);
   --color-white-5: rgba(255, 255, 255, 0.05);
-  --color-primary: #fdc000;
-  --color-hover: #f86a05;
-  --color-area: #1c212e;
+  --color-primary: #d3d3d3;
+  --color-hover: #9c9c9c;
+  --color-area: #0a0909;
 }
 body {
   font-family: "Roboto", "sans-serif";
@@ -19,7 +19,7 @@ body {
 
 .container {
   max-width: 1120px;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 40px 0;
 }
 
@@ -106,7 +106,7 @@ body {
 /* header */
 header {
   padding: 20px 40px;
-  background-color: rgba(14, 17, 27, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
   position: sticky;
   top: 0;
   z-index: 9;
@@ -148,7 +148,7 @@ header .user {
   right: 40px;
   margin: auto;
   transition: 0.3s;
-  background-image: url("../icon.png");
+  background-image: url("./icon.png");
   background-size: cover;
 }
 header .user:hover {
@@ -328,4 +328,44 @@ footer a:hover {
   font-family: "Oswald", sans-serif;
   color: var(--color-white);
   margin: 24px 0 6px;
+}
+
+/* about */
+/* .container.about {
+  margin-top: 100px;
+} */
+.about .photo {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto 20px;
+  border-radius: 10px;
+  background-size: cover;
+  background-image: url("./icon.png");
+}
+
+.about .name {
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 20px;
+}
+.about p {
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.about a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.about a:hover {
+  text-decoration: underline;
+}
+
+/* not Found */
+
+.not-found h1 {
+  font-size: 70px;
+  font-weight: 700;
+  color: var(--color-white-10);
+  text-align: center;
 }
