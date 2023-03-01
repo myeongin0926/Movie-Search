@@ -12,13 +12,15 @@ export default class GoTop extends Component {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
- 
-    window.addEventListener("scroll", throttle(() => {
+    window.addEventListener(
+      "scroll",
+      throttle(() => {
         if (window.scrollY < 400) {
           topEl.classList.add("hide");
         } else {
           topEl.classList.remove("hide");
         }
-      },300))
-  
-    }
+      }, 300)
+    );
+  }
+}
