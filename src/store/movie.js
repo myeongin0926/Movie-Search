@@ -11,6 +11,7 @@ const store = new Store({
 });
 
 export default store;
+
 export const searchMovies = async (page) => {
   store.state.loading = true;
   store.state.page = page;
