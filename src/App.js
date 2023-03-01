@@ -7,6 +7,7 @@ export default class App extends Component {
     const routerView = document.createElement("router-view");
     const theHeader = new TheHeader().el;
     const theFooter = new TheFooter().el;
+
     this.el.append(theHeader, routerView, theFooter);
   }
 }

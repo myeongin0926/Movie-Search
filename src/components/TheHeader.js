@@ -18,7 +18,7 @@ export default class TheHeader extends Component {
   }
   render() {
     this.el.innerHTML = /*html*/ `
-    <a href="#/" class='logo'><span>Ham</span> Stone</a>
+    <a href="#/" class='logo'><span>OMDb</span> API</a>
     <nav>
         <ul>
            ${this.state.menus
