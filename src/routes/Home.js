@@ -13,6 +13,8 @@ export default class Home extends Component {
     const movieListMore = new MovieListMore().el;
     const goTop = new GoTop().el;
 
+
+
     this.el.classList.add("container");
     this.el.append(headline, search, movieList, movieListMore, goTop);
   }

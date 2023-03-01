@@ -22,7 +22,16 @@ body {
   margin: 50px auto;
   padding: 40px 0;
 }
-
+@media (max-width: 1200px) {
+  .container {
+    padding: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 40px 20px;
+  }
+}
 .btn {
   height: 50px;
   padding: 0 20px;
@@ -155,6 +164,18 @@ header .user:hover {
   transform: scale(1.2);
 }
 
+@media (max-width: 600px) {
+  header {
+    padding: 14px 20px;
+  }
+  header nav {
+    display: none;
+  }
+  header .user {
+    right: 20px;
+  }
+}
+
 /* footer */
 footer {
   padding: 40px 40px 60px;
@@ -185,6 +206,13 @@ footer a:hover {
 .headline p {
   color: var(--color-white-30);
 }
+
+@media (max-width: 600px) {
+  .headline h1 {
+    font-size: 60px;
+  }
+}
+
 /* search */
 .search {
   display: flex;
@@ -330,10 +358,26 @@ footer a:hover {
   margin: 24px 0 6px;
 }
 
+@media (max-width: 1200px) {
+  .the-movie {
+    gap: 30px;
+  }
+  .the-movie .poster {
+    --width: 300px;
+  }
+}
+@media (max-width: 720px) {
+  .the-movie {
+    display: block;
+  }
+  .the-movie .title {
+    font-size: 50px;
+    margin-top: 50px;
+  }
+}
+
 /* about */
-/* .container.about {
-  margin-top: 100px;
-} */
+
 .about .photo {
   width: 200px;
   height: 200px;
@@ -386,6 +430,21 @@ footer a:hover {
   cursor: pointer;
   transition: 0.3s;
 }
+.go-top.hide {
+  visibility: hidden;
+  opacity: 0;
+}
 .go-top:hover {
   border-radius: 25%;
+}
+
+@media (max-width: 1200px) {
+  .go-top {
+    right: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .go-top {
+    right: 10px;
+  }
 }
